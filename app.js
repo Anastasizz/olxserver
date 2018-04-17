@@ -89,14 +89,11 @@ app.use('/olxrequests', proxy('https://www.olx.kz/', {
 			console.log(o);
 			console.log('**************************************');
 			proxyResData.oo = o;
-			//resolve(proxyResData.oo);
-			resolve({"st":"ok"});
-			//resolve(o);
+			resolve(proxyResData.oo);
 		}else{
 			console.log("Увы, нет таких объявлений");
 			console.log('**************************************');
-			//resolve("Увы, нет таких объявлений");
-			resolve("String");
+			resolve("Увы, нет таких объявлений");
 		}
       }, 200);
     });
